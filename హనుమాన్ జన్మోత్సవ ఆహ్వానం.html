@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Hanuman Festival Invitation</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: orange;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+    .card {
+      background-color: green;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      max-width: 500px;
+      padding: 20px;
+      text-align: center;
+    }
+    .card img {
+      border-radius: 10px;
+      max-width: 100%;
+    }
+    .card h1 {
+      color: orange;
+      margin-top: 10px;
+    }
+    .card h2 {
+      color: red;
+    }
+    .card p {
+      color: white;
+    }
+    .card form {
+      margin-top: 20px;
+    }
+    .card label {
+      display: block;
+      margin-top: 10px;
+      text-align: left;
+      color: white;
+    }
+    .card input {
+      margin-bottom: 10px;
+      padding: 10px;
+      width: calc(100% - 22px);
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .card button {
+      background-color: #d9534f;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .card button:hover {
+      background-color: orange;
+    }
+  </style>
+</head>
+<body>
+  <div class="card" id="card">
+    <img id="hanumanImage" src="C:/Users/kalya/Downloads/IMG_20240529_120626.jpg" alt="Hanuman">
+    <h1>హనుమాన్ జన్మోత్సవ ఆహ్వానం</h1>
+    <h2>శ్రీ కృష్ణ దేవరాయలు వీధి యూత్</h2>
+    <form id="rsvpForm" onsubmit="showInvitationCard(event)">
+      <label for="name">Enter Your Name:</label>
+      <input type="text" id="name" name="name" required>
+      <button type="submit">జై శ్రీరామ్</button>
+    </form>
+  </div>
+
+  <script>
+    function showInvitationCard(event) {
+      event.preventDefault();
+      var name = document.getElementById("name").value;
+      if (name) {
+        var card = document.getElementById("card");
+        card.innerHTML = '<img src="C:/Users/kalya/Downloads/Invitation.png" alt="Invitation Card">';
+      } else {
+        alert("Please enter your name.");
+      }
+    }
+  </script>
+</body>
+</html>
